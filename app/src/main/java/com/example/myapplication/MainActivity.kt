@@ -43,13 +43,25 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
-//        binding.mon.setOnClickListener{
-//            replaceFragment(monday())
-//        }
+        binding.mon.setOnClickListener{
+            replaceFragment(monday())
+        }
 
         binding.tue.setOnClickListener{
             replaceFragment(tuesday())
+        }
+
+
+        binding.wed.setOnClickListener{
+            replaceFragment(wednesday())
+        }
+
+        binding.thur.setOnClickListener{
+            replaceFragment(thursday())
+        }
+
+        binding.fri.setOnClickListener{
+            replaceFragment(friday())
         }
 
 
@@ -61,9 +73,9 @@ class MainActivity : AppCompatActivity() {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragmentContainer,fragment)
+        fragmentTransaction.addToBackStack(null) // Add the transaction to the back stack
         fragmentTransaction.commit()
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toggle.onOptionsItemSelected(item)){
             return true

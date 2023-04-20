@@ -21,9 +21,9 @@ class tuesday : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_tuesday, container, false)
-        add = view.findViewById(R.id.add)
-        layout = view.findViewById(R.id.container)
+        var view = inflater.inflate(R.layout.fragment_tuesday, container, false)
+        add = view.findViewById(R.id.btntuesday)
+        layout = view.findViewById(R.id.container2)
 
         buildDialog()
 

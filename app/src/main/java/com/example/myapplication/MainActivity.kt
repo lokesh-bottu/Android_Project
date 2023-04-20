@@ -52,6 +52,10 @@ class MainActivity : AppCompatActivity() {
             replaceFragment(tuesday())
         }
 
+
+
+
+
     }
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
